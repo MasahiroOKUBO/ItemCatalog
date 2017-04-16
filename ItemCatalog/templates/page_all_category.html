@@ -1,0 +1,14 @@
+{% extends "parts_base.html" %}
+{% block content %}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    {% include "parts_header.html" %}
+    {% include "parts_navbar.html" %}
+    {% include "parts_fab.html" %}
+    {% include "parts_flash_message.html" %}
+    <main class="mdl-layout__content">
+        {% include "fragment_all_categories.html" %}
+        {% include "parts_footer.html" %}
+    </main>
+</div>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

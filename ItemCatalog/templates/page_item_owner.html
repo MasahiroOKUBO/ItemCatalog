@@ -1,0 +1,25 @@
+{% extends "parts_base.html" %}
+{% block content %}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    {% include "parts_header.html" %}
+    {% include "parts_navbar.html" %}
+    {% include "parts_fab.html" %}
+    {% include "parts_flash_message.html" %}
+    <main class="mdl-layout__content">
+        <a href="/">TOPへ戻る</a>
+        <a href="/item/{{ item.id }}/edit">編集</a>
+        <a href="/item/{{ item.id }}/delete">削除</a>
+        <p>id : {{ item.id}}</p>
+        <p>name : {{ item.name}}</p>
+        <p>mail : {{ item.email}}</p>
+        <p>description : {{ item.description}}</p>
+        <p>price : {{ item.price}}</p>
+        <p>picture : {{ item.picture}}</p>
+        <p>user_id : {{ item.user_id}}</p>
+        <p>category_id : {{ item.category_id}}</p>
+        <p>owner name : {{ owner.name }}</p>
+        <p>owner email : {{ owner.email }}</p>
+        {% include "parts_footer.html" %}
+    </main>
+</div>
+{% endblock %}

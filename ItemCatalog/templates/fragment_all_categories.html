@@ -1,0 +1,22 @@
+<div class="mdl-grid portfolio-max-width">
+    {% for category in categories %}
+    <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">
+                {{ category.name }}
+            </h2>
+            {% if 'username' not in session %}
+            {% else %}
+                <a href='/category/{{ category.id }}/edit/'>編集</a>
+                <a href='/category/{{ category.id }}/delete/'>削除</a>
+            {% endif %}
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+               href="/category/{{ category.id }}/item/">Show Category Items</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+

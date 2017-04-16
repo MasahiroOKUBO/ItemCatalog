@@ -1,0 +1,20 @@
+{% extends "parts_base.html" %}
+{% block content %}
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    {% include "parts_header.html" %}
+    {% include "parts_navbar.html" %}
+    {% include "parts_flash_message.html" %}
+    <main class="mdl-layout__content">
+        <h1>New Category</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" maxlength="100" name="name">
+                <div class="padding-bottom"></div>
+                <button type="submit" class="btn btn-default" id="submit" type="submit">Create</button>
+            </div>
+        </form>
+    </main>
+</div>
+<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+{% endblock %}

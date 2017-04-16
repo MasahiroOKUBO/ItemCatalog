@@ -1,0 +1,19 @@
+        <div class="mdl-grid portfolio-max-width">
+            {% for item in items %}
+            <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                <div class="mdl-card__media">
+                     <img class="article-image" src="{{ url_for('static', filename='') }}{{ item.picture }}" border="0" alt="">
+                </div>
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">{{ item.name }}</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    {{ item.price }}
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                       href="/item/{{ item.id }}">Show Detail</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
